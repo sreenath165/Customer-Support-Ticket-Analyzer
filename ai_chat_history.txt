@@ -1,0 +1,360 @@
+
+
+ [SeverityAgent] - 2025-06-25 16:00:07
+User Input:
+{'subject': 'This product is completely broken!!!', 'message': "Nothing works! I can't even log in. This is the worst software I've ever used."}
+
+Model Output:
+{
+  "severity_score": 9,
+  "severity_category": "critical",
+  "reasoning": "The customer expresses extreme dissatisfaction, claiming the product is completely broken and unable to perform even the basic function of logging in. This indicates a severe issue that could potentially lead to loss of data or functionality for the user."
+}
+
+Reasoning:
+The customer expresses extreme dissatisfaction, claiming the product is completely broken and unable to perform even the basic function of logging in. This indicates a severe issue that could potentially lead to loss of data or functionality for the user.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:10
+User Input:
+{'customer_tier': 'free', 'monthly_revenue': 0, 'previous_tickets': 0, 'account_age_days': 2}
+
+Model Output:
+{
+  "priority_score": 1,
+  "priority_level": "low",
+  "reasoning": "This is a free tier customer with no recorded previous tickets, a brief account age of 2 days, and zero monthly revenue. This indicates a low priority support request."
+}
+
+Reasoning:
+This is a free tier customer with no recorded previous tickets, a brief account age of 2 days, and zero monthly revenue. This indicates a low priority support request.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:12
+User Input:
+{'subject': 'This product is completely broken!!!', 'message': "Nothing works! I can't even log in. This is the worst software I've ever used."}
+
+Model Output:
+{
+  "severity_score": 9,
+  "severity_category": "critical",
+  "reasoning": "The user is experiencing a complete failure to use the product, specifically unable to log in, which is essential for any product's functionality. They also express strong dissatisfaction, suggesting a significant impact on their work or personal life. This degree of problem affects the usability and utility of the product, making it a critical issue."
+}
+
+Reasoning:
+The user is experiencing a complete failure to use the product, specifically unable to log in, which is essential for any product's functionality. They also express strong dissatisfaction, suggesting a significant impact on their work or personal life. This degree of problem affects the usability and utility of the product, making it a critical issue.
+
+Routing Decision: Route to: Critical Response Team
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:15
+User Input:
+{'customer_tier': 'free', 'monthly_revenue': 0, 'previous_tickets': 0, 'account_age_days': 2}
+
+Model Output:
+{
+  "priority_score": 1,
+  "priority_level": "low",
+  "reasoning": "The customer is a free tier user with zero monthly revenue, no previous tickets, and has only had the account for 2 days. This indicates a low-priority support request."
+}
+
+Reasoning:
+The customer is a free tier user with zero monthly revenue, no previous tickets, and has only had the account for 2 days. This indicates a low-priority support request.
+
+Routing Decision: Route to: Critical Response Team
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:18
+User Input:
+{'subject': 'Minor UI issue with dashboard', 'message': 'Hi team, just noticed the dashboard numbers are slightly misaligned on mobile view.'}
+
+Model Output:
+{
+  "severity_score": 2,
+  "severity_category": "low",
+  "reasoning": "The issue described is a minor UI discrepancy on mobile view, which does not seem to affect the functionality of the dashboard significantly. Hence, it can be categorized as low severity."
+}
+
+Reasoning:
+The issue described is a minor UI discrepancy on mobile view, which does not seem to affect the functionality of the dashboard significantly. Hence, it can be categorized as low severity.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:21
+User Input:
+{'customer_tier': 'enterprise', 'monthly_revenue': 25000, 'previous_tickets': 15, 'account_age_days': 730}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "As the customer belongs to the enterprise tier, high revenue, has a history of 15 previous tickets and an account age of 730 days, this indicates a high-value customer who may require immediate attention due to their substantial revenue and history of interaction with the company."
+}
+
+Reasoning:
+As the customer belongs to the enterprise tier, high revenue, has a history of 15 previous tickets and an account age of 730 days, this indicates a high-value customer who may require immediate attention due to their substantial revenue and history of interaction with the company.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:24
+User Input:
+{'subject': 'Minor UI issue with dashboard', 'message': 'Hi team, just noticed the dashboard numbers are slightly misaligned on mobile view.'}
+
+Model Output:
+{
+  "severity_score": 2,
+  "severity_category": "low",
+  "reasoning": "The described issue is a minor UI alignment problem that is likely to affect the visual appeal of the mobile dashboard, but it does not seem to impact functionality or user experience significantly. Thus, the severity is assessed as low."
+}
+
+Reasoning:
+The described issue is a minor UI alignment problem that is likely to affect the visual appeal of the mobile dashboard, but it does not seem to impact functionality or user experience significantly. Thus, the severity is assessed as low.
+
+Routing Decision: Route to: Dedicated Customer Success Team
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:26
+User Input:
+{'customer_tier': 'enterprise', 'monthly_revenue': 25000, 'previous_tickets': 15, 'account_age_days': 730}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "The customer is from the Enterprise tier, which typically requires a faster response due to their significant monthly revenue. The customer has had 15 previous tickets, suggesting a higher level of engagement and potential recurring issues. The account age is over 730 days, indicating a long-standing customer."
+}
+
+Reasoning:
+The customer is from the Enterprise tier, which typically requires a faster response due to their significant monthly revenue. The customer has had 15 previous tickets, suggesting a higher level of engagement and potential recurring issues. The account age is over 730 days, indicating a long-standing customer.
+
+Routing Decision: Route to: Dedicated Customer Success Team
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:29
+User Input:
+{'subject': 'Feature Request: Bulk export', 'message': 'We need bulk export functionality for our quarterly reports.'}
+
+Model Output:
+{
+  "severity_score": 3,
+  "severity_category": "low",
+  "reasoning": "This is a feature request rather than a critical issue. However, the need for this feature seems important for efficient report generation, hence a severity score of 3."
+}
+
+Reasoning:
+This is a feature request rather than a critical issue. However, the need for this feature seems important for efficient report generation, hence a severity score of 3.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:31
+User Input:
+{'customer_tier': 'premium', 'monthly_revenue': 5000, 'previous_tickets': 5, 'account_age_days': 400}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "The customer is a Premium tier customer with high monthly revenue and has an average number of previous tickets (5). Given their premium status, it is crucial to resolve their issues promptly as they contribute significantly to your business. Their account age of 400 days shows a long-standing relationship, further emphasizing the need for timely support."
+}
+
+Reasoning:
+The customer is a Premium tier customer with high monthly revenue and has an average number of previous tickets (5). Given their premium status, it is crucial to resolve their issues promptly as they contribute significantly to your business. Their account age of 400 days shows a long-standing relationship, further emphasizing the need for timely support.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:35
+User Input:
+{'subject': 'Feature Request: Bulk export', 'message': 'We need bulk export functionality for our quarterly reports.'}
+
+Model Output:
+{
+  "severity_score": 3,
+  "severity_category": "low",
+  "reasoning": "This issue is related to a feature request that, while beneficial, does not seem to affect the immediate functionality or prevent any crucial tasks that the user needs to perform. However, it may need to be addressed to improve workflow efficiency, hence a low severity score."
+}
+
+Reasoning:
+This issue is related to a feature request that, while beneficial, does not seem to affect the immediate functionality or prevent any crucial tasks that the user needs to perform. However, it may need to be addressed to improve workflow efficiency, hence a low severity score.
+
+Routing Decision: Route to: Dedicated Customer Success Team
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:37
+User Input:
+{'customer_tier': 'premium', 'monthly_revenue': 5000, 'previous_tickets': 5, 'account_age_days': 400}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "The customer is a premium tier, with a monthly revenue of 5000 and has submitted 5 previous tickets. Although the account age is relatively normal at 400 days, the combined factors of high revenue and multiple past tickets indicate a high-priority support request."
+}
+
+Reasoning:
+The customer is a premium tier, with a monthly revenue of 5000 and has submitted 5 previous tickets. Although the account age is relatively normal at 400 days, the combined factors of high revenue and multiple past tickets indicate a high-priority support request.
+
+Routing Decision: Route to: Dedicated Customer Success Team
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:40
+User Input:
+{'subject': 'API rate limits unclear', 'message': 'Getting rate limited but docs say we should have 1000 requests/hour.'}
+
+Model Output:
+{
+  "severity_score": 6,
+  "severity_category": "medium",
+  "reasoning": "The issue appears to be related to API usage, which can impact the functionality of the application. The ticket states that the rate limits are being exceeded, but the documentation indicates a limit of 1000 requests per hour. This discrepancy could cause significant service disruptions if the actual rate limit is lower. However, since the impact is not immediate and there seems to be a potential miscommunication or error, the severity is currently medium."
+}
+
+Reasoning:
+The issue appears to be related to API usage, which can impact the functionality of the application. The ticket states that the rate limits are being exceeded, but the documentation indicates a limit of 1000 requests per hour. This discrepancy could cause significant service disruptions if the actual rate limit is lower. However, since the impact is not immediate and there seems to be a potential miscommunication or error, the severity is currently medium.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:43
+User Input:
+{'customer_tier': 'premium', 'monthly_revenue': 3000, 'previous_tickets': 8, 'account_age_days': 180}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "The customer is a premium tier customer, bringing in a high monthly revenue of 3000. They have also made 8 previous tickets, indicating a high level of engagement. The account age of 180 days shows a considerable commitment to the service."
+}
+
+Reasoning:
+The customer is a premium tier customer, bringing in a high monthly revenue of 3000. They have also made 8 previous tickets, indicating a high level of engagement. The account age of 180 days shows a considerable commitment to the service.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:45
+User Input:
+{'subject': 'API rate limits unclear', 'message': 'Getting rate limited but docs say we should have 1000 requests/hour.'}
+
+Model Output:
+{
+  "severity_score": 7,
+  "severity_category": "high",
+  "reasoning": "The issue is a high severity due to a discrepancy in the reported API rate limits and the actual usage. This could potentially lead to service disruptions if the actual rate limits are lower than what is documented. A sudden drop in the number of requests processed might impact the functionality of the application."
+}
+
+Reasoning:
+The issue is a high severity due to a discrepancy in the reported API rate limits and the actual usage. This could potentially lead to service disruptions if the actual rate limits are lower than what is documented. A sudden drop in the number of requests processed might impact the functionality of the application.
+
+Routing Decision: Route to: Dedicated Customer Success Team
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:49
+User Input:
+{'customer_tier': 'premium', 'monthly_revenue': 3000, 'previous_tickets': 8, 'account_age_days': 180}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "The customer is a premium tier account, which typically indicates a higher revenue. The customer has submitted 8 previous tickets, indicating a higher level of interaction with our support team. The account age of 180 days also shows a sustained relationship. Therefore, the support request should be classified as high-priority."
+}
+
+Reasoning:
+The customer is a premium tier account, which typically indicates a higher revenue. The customer has submitted 8 previous tickets, indicating a higher level of interaction with our support team. The account age of 180 days also shows a sustained relationship. Therefore, the support request should be classified as high-priority.
+
+Routing Decision: Route to: Dedicated Customer Success Team
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:52
+User Input:
+{'subject': 'Urgent: Security vulnerability?', 'message': 'Our security team flagged that your API responses include internal server paths.'}
+
+Model Output:
+{
+  "severity_score": 8,
+  "severity_category": "critical",
+  "reasoning": "The issue involves a potential security vulnerability, specifically the disclosure of internal server paths in API responses. This could potentially expose sensitive information or allow unauthorized access, posing a critical risk."
+}
+
+Reasoning:
+The issue involves a potential security vulnerability, specifically the disclosure of internal server paths in API responses. This could potentially expose sensitive information or allow unauthorized access, posing a critical risk.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:00:55
+User Input:
+{'customer_tier': 'enterprise', 'monthly_revenue': 50000, 'previous_tickets': 20, 'account_age_days': 900}
+
+Model Output:
+{
+  "priority_score": 8,
+  "priority_level": "high",
+  "reasoning": "The customer is an enterprise-level client, which indicates a significant revenue stream. With 20 previous tickets and an account age of 900 days, the customer has a history of active engagement. This high number of tickets may indicate recurring issues that require attention to ensure the satisfaction and retention of a valuable client."
+}
+
+Reasoning:
+The customer is an enterprise-level client, which indicates a significant revenue stream. With 20 previous tickets and an account age of 900 days, the customer has a history of active engagement. This high number of tickets may indicate recurring issues that require attention to ensure the satisfaction and retention of a valuable client.
+
+Routing Decision: N/A
+--------------------------------------------------
+
+
+ [SeverityAgent] - 2025-06-25 16:00:58
+User Input:
+{'subject': 'Urgent: Security vulnerability?', 'message': 'Our security team flagged that your API responses include internal server paths.'}
+
+Model Output:
+{
+  "severity_score": 8,
+  "severity_category": "high",
+  "reasoning": "The issue of exposing internal server paths through API responses could potentially lead to unauthorized access or data breaches, making it a high severity issue. The subject 'Urgent' also suggests the urgency and importance of addressing this issue."
+}
+
+Reasoning:
+The issue of exposing internal server paths through API responses could potentially lead to unauthorized access or data breaches, making it a high severity issue. The subject 'Urgent' also suggests the urgency and importance of addressing this issue.
+
+Routing Decision: Route to: VIP Escalation Team
+--------------------------------------------------
+
+
+ [PriorityAgent] - 2025-06-25 16:01:01
+User Input:
+{'customer_tier': 'enterprise', 'monthly_revenue': 50000, 'previous_tickets': 20, 'account_age_days': 900}
+
+Model Output:
+{
+  "priority_score": 9,
+  "priority_level": "high",
+  "reasoning": "The customer is an enterprise-tier with a monthly revenue of $50,000 and has submitted 20 previous tickets, indicating a high interaction with your support system. Additionally, they have been a customer for 900 days, suggesting a long-term relationship and substantial investment in your services."
+}
+
+Reasoning:
+The customer is an enterprise-tier with a monthly revenue of $50,000 and has submitted 20 previous tickets, indicating a high interaction with your support system. Additionally, they have been a customer for 900 days, suggesting a long-term relationship and substantial investment in your services.
+
+Routing Decision: Route to: VIP Escalation Team
+--------------------------------------------------
