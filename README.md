@@ -1,4 +1,4 @@
-# 🧠 Customer Support Ticket Analyzer & Router
+# Customer Support Ticket Analyzer & Router
 
 An AI-powered system that intelligently classifies and routes customer support tickets based on severity and priority using multi-agent architecture.
 
@@ -17,24 +17,4 @@ This project showcases how a real-world support workflow can be automated using 
 🔹 **Scalable Input**: Supports dynamic ticket ingestion via `test_tickets.json`.
 
 ---
-
-## 📁 Repository Structure
-.
-├── agents/
-│ ├── severity_agent.py # Severity scoring agent
-│ └── priority_agent.py # Priority scoring agent
-│
-├── assets/
-│ └── architecture.png
-│
-├── test_tickets.json # Input sample tickets
-├── results.json # Output final results
-├── ai_chat_history.txt # AI reasoning logs
-│
-├── main.py # Core multi-agent execution
-├── evaluation.py # Validate against expected outputs
-├── dashboard.py # Streamlit visualization dashboard
-├── pydantic_ai_mock.py # Core agent framework and logging
-├── requirements.txt # Python project dependencies
-├── .env # API key (not committed)
 
