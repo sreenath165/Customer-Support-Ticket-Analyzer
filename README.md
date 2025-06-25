@@ -52,4 +52,13 @@ streamlit dashboard.py            # If the dashboard doesn't open automatically
 ├── requirements.txt
 ```
 
-## NOTE: 
+## 💡 NOTE: 
+- You must use your own API key. This project does not come with any pre-set API keys.
+- You can use any LLM provider supported by OpenRouter, such as:
+          mistralai/mistral-7b-instruct
+          openai/gpt-3.5-turbo
+          meta-llama/llama-3-8b-instruct etc.
+- Ensure that you update the API Key environment variable and the LLM model in agents/severity_agent.py and agents/priority_agent.py and update the pydantic_ai_mock.py
+- This allows you to plug in different models of your choice as long as they follow the respective-compatible chat APIs.
+
+## 
