@@ -18,3 +18,17 @@ This project showcases how a real-world support workflow can be automated using 
 
 ---
 
+## ⚙️ Setup Instructions
+
+1. Clone the repo and install the required dependencies:
+
+```bash
+git clone https://github.com/sreenath165/Customer-Support-Ticket-Analyzer-And-Router.git
+cd Customer-Support-Ticket-Analyzer-And-Router
+
+python -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python main.py
+
+streamlit dashboard.py            # If the dashboard doesn't open automatically
