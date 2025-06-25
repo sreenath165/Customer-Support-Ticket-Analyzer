@@ -100,3 +100,56 @@ This system can be adapted to many real-world scenarios:
 | ✅ **SaaS Tier-Based Support**     | Prioritize enterprise/premium customers dynamically               |
 | ✅ **AI Model Evaluation**         | Plug in new LLMs and test their reasoning and routing consistency |
 | ✅ **Agent Research**              | Extend to more agents (e.g., sentiment, complexity, urgency)      |
+
+## 📊 Validation Framework
+To know if your AI agents are performing well (evaluation.py)
+This will:
+- Run all tickets through the agents
+- Compare actual vs expected routing
+- Print out ✅/❌ results and final score (e.g., 4/5 correct)
+
+Useful for:
+- Testing different prompt styles
+- Comparing multiple models
+- Iterating on logic improvements
+
+## What didn't work and how I fixed? ❌/✅
+
+During development, several challenges were encountered that required iterative fixes:
+- ❌ Incompatible OpenAI APIs
+The OpenAI library’s older methods were deprecated in recent releases, which led to compatibility issues with the intended model interaction flow.
+✅ Resolved by switching to OpenRouter’s modern API structure, enabling flexible model usage with structured payloads.
+- ❌ Pydantic AI integration failures
+The original Pydantic AI library posed compatibility and stability problems across environments and had limited support for dynamic models.
+✅ A custom mock layer was introduced to mimic its behavior while allowing easier integration and control.
+- ❌ Unstructured or noisy model responses
+The language model sometimes included human-like reasoning or summaries along with the expected JSON, causing validation issues.
+✅ Implemented logic to extract clean JSON blocks from mixed text outputs to ensure smooth parsing.
+- ❌ Request limits from OpenRouter
+Free-tier usage limits were quickly exceeded during development and debugging.
+✅ Used multiple API keys and planned request frequency to stay within limits during testing.
+- ❌ Hardcoded test cases in multiple places
+Early versions of the project had ticket definitions scattered across files, leading to redundancy and inconsistencies.
+✅ All ticket data was consolidated into a single source file (test_tickets.json) to avoid duplication and enable scalability.
+
+## SUMMARY
+## 🧠 Documentation of Approach
+**Problem:** Customer support teams receive large volumes of tickets. Manually reviewing and routing them delays resolution and increases operational cost.
+
+**Objective:** To Build a scalable AI-powered pipeline that:
+- Understands ticket severity (based on content)
+- Understands priority (based on customer metadata)
+- Routes each ticket automatically
+- Provides reasoning behind every decision
+  
+**Architecture:**
+- Multi-Agent Design: Two separate Pydantic agents (SeverityAgent, PriorityAgent) each analyze a specific aspect of the ticket.
+- Prompt Engineering: Crafted structured system prompts to enforce deterministic outputs and aligned reasoning.
+- Routing Logic: Simple rule-based function interprets scores and labels to route appropriately.
+- Evaluation Framework: Checks if routing decisions align with expected values for known test cases.
+- Interactive Dashboard: Lets users filter by route, visualize trends, and explore past results with timestamps.
+
+**LLM Interfacing:**
+- Used OpenRouter API as a drop-in alternative to OpenAI API.
+- Supported flexible model names like mistralai/mistral-7b-instruct, gpt-3.5-turbo, etc.
+- All interactions logged in ai_chat_history.txt with full reasoning and metadata.
