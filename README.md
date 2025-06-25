@@ -32,3 +32,24 @@ pip install -r requirements.txt
 python main.py
 
 streamlit dashboard.py            # If the dashboard doesn't open automatically
+```
+
+## 📦 Folder Structure
+
+```plaintext
+.
+├── agents/
+│   ├── severity_agent.py
+│   └── priority_agent.py
+├── test_tickets.json         # ✅ Input tickets
+├── results.json              # ✅ Output results
+├── main.py                   # 🔁 Main entry point
+├── evaluation.py             # ✅ Evaluation of model routing
+├── streamlit_dashboard.py    # 📊 Dashboard UI
+├── ai_chat_history.txt       # 📄 Full chat logs
+├── pydantic_ai_mock.py       # 🧠 Pydantic-style mock
+├── .env                      # 🔐 Your API key goes here
+├── requirements.txt
+```
+
+## NOTE: 
