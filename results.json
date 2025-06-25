@@ -1,0 +1,47 @@
+[
+  {
+    "ticket_id": "SUP-001",
+    "severity_score": 9,
+    "severity_category": "critical",
+    "priority_score": 1,
+    "priority_level": "low",
+    "routing_decision": "Route to: Critical Response Team",
+    "timestamp": "2025-06-25 14:04:22"
+  },
+  {
+    "ticket_id": "SUP-002",
+    "severity_score": 2,
+    "severity_category": "low",
+    "priority_score": 9,
+    "priority_level": "high",
+    "routing_decision": "Route to: Dedicated Customer Success Team",
+    "timestamp": "2025-06-25 14:04:32"
+  },
+  {
+    "ticket_id": "SUP-003",
+    "severity_score": 2,
+    "severity_category": "low",
+    "priority_score": 8,
+    "priority_level": "high",
+    "routing_decision": "Route to: Dedicated Customer Success Team",
+    "timestamp": "2025-06-25 14:04:43"
+  },
+  {
+    "ticket_id": "SUP-004",
+    "severity_score": 6,
+    "severity_category": "medium",
+    "priority_score": 8,
+    "priority_level": "high",
+    "routing_decision": "Route to: Dedicated Customer Success Team",
+    "timestamp": "2025-06-25 14:04:55"
+  },
+  {
+    "ticket_id": "SUP-005",
+    "severity_score": 9,
+    "severity_category": "critical",
+    "priority_score": 9,
+    "priority_level": "high",
+    "routing_decision": "Route to: VIP Escalation Team",
+    "timestamp": "2025-06-25 14:05:05"
+  }
+]
